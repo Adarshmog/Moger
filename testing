@@ -1,0 +1,8 @@
+Git Notes:
+
+1. git add <filename> stages changes.
+2. git commit -m "message" records changes.
+3. git push uploads commits to the remote repository.
+4. git status shows current state.
+5. git log shows commit history.
+
