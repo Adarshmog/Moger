@@ -2,16 +2,22 @@ pipeline {
     agent { label 'windows_slave' }
 
     stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/Adarshmog/Moger.git'
+            }
+        }
+
         stage('Step 1: Hello') {
             steps {
-                echo '👋 Hello from Linux Agent!'
+                echo '👋 Hello from Windows Agent!'
             }
         }
 
         stage('Step 2: Directory') {
             steps {
-                sh 'pwd'
-                sh 'ls -l'
+                bat 'cd'
+                bat 'dir'
             }
         }
 
